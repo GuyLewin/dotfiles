@@ -24,9 +24,10 @@ plugins=(git virtualenv colored-man-pages colorize osx kubectl zsh-autosuggestio
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-for config (~/.zsh/*.zsh); do
+for config (~/.config/zsh/*.zsh); do
   source $config
 done
+source "${HOME}/.iterm2_shell_integration.zsh"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
