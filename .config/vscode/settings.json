@@ -1,0 +1,19 @@
+{
+    "go.useLanguageServer": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "java.requirements.JDK11Warning": false,
+    "window.zoomLevel": 0,
+    "editor.largeFileOptimizations": false,
+    "java.semanticHighlighting.enabled": true,
+    "python.languageServer": "Microsoft",
+    "git.autofetch": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF"
+}
