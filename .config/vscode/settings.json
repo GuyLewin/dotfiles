@@ -13,7 +13,10 @@
     "window.zoomLevel": 0,
     "editor.largeFileOptimizations": false,
     "java.semanticHighlighting.enabled": true,
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Pylance",
     "git.autofetch": true,
-    "terminal.integrated.fontFamily": "MesloLGS NF"
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
