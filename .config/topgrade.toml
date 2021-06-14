@@ -9,7 +9,7 @@
 
 # Disable specific steps - same options as the command line flag
 #disable = ["system", "emacs"]
-disable = ["node", "go", "microsoft_auto_update"]
+disable = ["node", "gem", "cargo"]
 
 # Run specific steps - same options as the command line flag
 #only = ["system", "emacs"]

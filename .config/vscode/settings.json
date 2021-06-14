@@ -10,7 +10,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
     "java.requirements.JDK11Warning": false,
-    "window.zoomLevel": 0,
     "editor.largeFileOptimizations": false,
     "java.semanticHighlighting.enabled": true,
     "python.languageServer": "Pylance",
@@ -18,5 +17,15 @@
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "git.ignoreMissingGitWarning": true,
+    "python.defaultInterpreterPath": "/usr/local/opt/python@3.9/bin/python3.9",
+    "go.toolsManagement.autoUpdate": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "window.zoomLevel": 1
 }
