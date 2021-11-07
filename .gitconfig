@@ -4,6 +4,7 @@
 	path = ~/.config/git/work.conf
 [core]
 	autocrlf = input
+	precomposeUnicode = true
 [merge]
         tool = intellij
 [difftool "intellij"]
