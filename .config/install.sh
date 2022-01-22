@@ -8,19 +8,6 @@ curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.
 
 brew install topgrade git autojump k9s unbound wget netcat helm go azure-cli readline maven node sqlite zsh-syntax-highlighting
 
-# https://pawelgrzybek.com/sync-vscode-settings-and-snippets-via-dotfiles-on-github/
-if [ -d "$HOME/Library/Application Support/Code/User" ]; then
-    echo "Syncing Visual Studio Code configuration"
-    rm -f "$HOME/Library/Application Support/Code/User/settings.json"
-    ln -s ~/.config/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
-    rm -f "$HOME/Library/Application Support/Code/User/keybindings.json"
-    ln -s ~/.config/vscode/keybindings.json "$HOME/Library/Application Support/Code/User/keybindings.json"
-    rm -rf "$HOME/Library/Application Support/Code/User/snippets"
-    ln -s ~/.config/vscode/snippets/ "$HOME/Library/Application Support/Code/User"
-else 
-    echo "Please install and launch Visual Studio Code to sync its configuration"
-fi
-
 # https://ohmyz.sh/
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "Installing Oh My Zsh"
