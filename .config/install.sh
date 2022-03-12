@@ -24,13 +24,17 @@ if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
 
+sh_realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
 # https://www.choosyosx.com/
 if [ ! -L ~/Library/Application\ Support/Choosy/behaviours.plist ]; then
     if [ -d ~/Library/Application\ Support/Choosy ]; then
         echo "Installing Choosy profile"
-        mv ~/Library/Application\ Support/Choosy/behaviours.plist ~/Library/Application\ Support/Choosy/behaviours.bak.plist
+        mv ~/Library/Application\ Support/Choosy/behaviours.plist ~/Library/Application\ Support/Choosy/behaviours.bak.plist 2>/dev/null
         config_dir="$(dirname $0)"
-        config_dir="$(realpath $config_dir)"
+        config_dir="$(sh_realpath $config_dir)"
         ln -s "${config_dir}/choosy/behaviours.plist" ~/Library/Application\ Support/Choosy/behaviours.plist
         echo "Restarting Choosy"
         killall Choosy
