@@ -9,7 +9,7 @@ fi
 # https://brew.sh/
 (brew --version > /dev/null) || (echo "Installing brew" && /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)")
 
-brew install topgrade git autojump k9s unbound wget netcat helm go azure-cli readline maven node sqlite zsh-syntax-highlighting
+brew install topgrade git wget netcat helm go readline sqlite kubectl zsh-syntax-highlighting
 
 # https://ohmyz.sh/
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
@@ -22,6 +22,17 @@ fi
 if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
     echo "Installing powerlevel10k theme"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+fi
+
+# https://github.com/zsh-users/zsh-autosuggestions/
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]; then
+    echo "Installing zsh-autosuggestions plugin"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+fi
+
+if [ ! -f ~/Library/Fonts/MesloLGS\ NF\ Regular.ttf ]; then
+    echo "Installing powerlevel10k fonts"
+    p10k configure
 fi
 
 sh_realpath() {
