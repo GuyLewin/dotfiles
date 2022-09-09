@@ -39,6 +39,9 @@ sh_realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
 }
 
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.config/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
 # https://www.choosyosx.com/
 if [ ! -L ~/Library/Application\ Support/Choosy/behaviours.plist ]; then
     if [ -d ~/Library/Application\ Support/Choosy ]; then
