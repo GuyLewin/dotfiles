@@ -3,4 +3,4 @@ alias docker_kill_all='docker container kill $(docker ps -q)'
 alias docker_rm_all_containers='docker container rm $(docker container ls -aq)'
 
 # https://www.atlassian.com/git/tutorials/dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/opt/homebrew/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
