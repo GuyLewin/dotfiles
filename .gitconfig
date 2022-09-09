@@ -1,17 +1,18 @@
 [include]
-	path = ~/.config/git/personal.conf
+    path = ~/.config/git/personal.conf
 [includeIf "gitdir:~/git/"]
-	path = ~/.config/git/work.conf
+    path = ~/.config/git/work.conf
+[include]
+    path = ~/.config/git/sign.conf
 [core]
-	autocrlf = input
-	precomposeUnicode = true
+    autocrlf = input
+    precomposeUnicode = true
 [merge]
-        tool = intellij
+    tool = intellij
 [difftool "intellij"]
-        cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea diff $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\")
+    cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea diff $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\")
 [mergetool "intellij"]
-        cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea merge $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\") $(cd $(dirname \"$BASE\") && pwd)/$(basename \"$BASE\") $(cd $(dirname \"$MERGED\") && pwd)/$(basename \"$MERGED\")
-        trustExitCode = true
-
+    cmd = /Applications/IntelliJ\\ IDEA.app/Contents/MacOS/idea merge $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\") $(cd $(dirname \"$BASE\") && pwd)/$(basename \"$BASE\") $(cd $(dirname \"$MERGED\") && pwd)/$(basename \"$MERGED\")
+    trustExitCode = true
 [pull]
-	rebase = false
+    rebase = false
